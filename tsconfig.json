@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -9,10 +10,14 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
+    "paths": {
+      "common/*": ["app/common/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": false,
     "strict": true,
     "target": "esnext"
   },
+  "exclude": ["config", "scripts"],
   "include": ["src"]
 }
