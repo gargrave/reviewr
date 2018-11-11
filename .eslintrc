@@ -31,7 +31,7 @@
     "no-unused-vars": "warn",
     "no-restricted-syntax": ["warn", "ForOfStatement"],
     "prefer-const": "warn",
-    "semi": ["warn", "never"],
+    "semi": ["warn", "always"],
     "sort-keys": "warn",
 
     "react/jsx-boolean-value": ["warn", "always"],

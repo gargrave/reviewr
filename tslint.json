@@ -15,7 +15,7 @@
     "no-submodule-imports": false,
     "object-literal-sort-keys": [true, "ignore-case", "shorthand-first"],
     "ordered-imports": false,
-    "semicolon": [false, "always"],
+    "semicolon": [true, "always"],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
   },
   "linterOptions": {
