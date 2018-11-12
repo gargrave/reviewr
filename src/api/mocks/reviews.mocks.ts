@@ -6,7 +6,7 @@ const mocks: Review[] = [
   {
     body:
       "I didn't ask it to or anything, but my phone totally exploded and burned up my nicest jeans.",
-    title: 'Phone explded in my pocket',
+    title: 'Phone exploded in my pocket',
   },
 ];
 

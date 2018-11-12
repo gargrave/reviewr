@@ -1,22 +1,16 @@
 import * as React from 'react';
 
-import mockReviews from './api/mocks/reviews.mocks';
-
-import ReviewList from './app/reviews/components/ReviewList/ReviewList';
+import ReviewListPage from './app/reviews/ReviewListPage/ReviewListPage';
 
 import styles from './App.module.scss';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className={styles.app}>
-        <h1>Reviewr</h1>
-        <main className={styles.main}>
-          <ReviewList reviews={mockReviews} />
-        </main>
-      </div>
-    );
-  }
-}
+const App: React.SFC = () => (
+  <div className={styles.app}>
+    <h1>Reviewr</h1>
+    <main className={styles.main}>
+      <ReviewListPage />
+    </main>
+  </div>
+);
 
 export default App;
