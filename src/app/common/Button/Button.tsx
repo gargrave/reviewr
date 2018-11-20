@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Button as ButtonBS } from 'reactstrap';
 
-export enum ButtonType {
+export enum ButtonColor {
   Danger = 'danger',
   Info = 'info',
   Link = 'link',
@@ -19,10 +19,10 @@ export enum ButtonNativeType {
 }
 
 type Props = {
-  /** The pre-defined color value to use (maps directly to Bootstrap's colors). */
-  buttonType?: ButtonType;
   /** The content of the button. Can be any valid React child, including simple text. */
   children: React.ReactNode;
+  /** The pre-defined color value to use (maps directly to Bootstrap's colors). */
+  color?: ButtonColor;
   /** The Button's click handler. You know the drill here. */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   /** The native HTML 'type' attribute to apply (default: 'button') */
@@ -36,18 +36,18 @@ type Props = {
  * with some additional styles/props added.
  */
 const Button: React.SFC<Props> = ({
-  buttonType,
+  color,
   children,
   onClick,
   type,
 }: Props) => (
-  <ButtonBS color={buttonType} onClick={onClick} type={type}>
+  <ButtonBS color={color} onClick={onClick} type={type}>
     {children}
   </ButtonBS>
 );
 
 Button.defaultProps = {
-  buttonType: ButtonType.Primary,
+  color: ButtonColor.Primary,
   type: ButtonNativeType.Button,
 };
 

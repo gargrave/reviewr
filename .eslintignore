@@ -1,2 +1,4 @@
 config
 scripts
+
+jest.config.js

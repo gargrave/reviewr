@@ -5,14 +5,11 @@
     "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "paths": {
-      "common/*": ["app/common/*"]
-    },
     "resolveJsonModule": true,
     "skipLibCheck": false,
     "strict": true,
