@@ -1,12 +1,7 @@
 import * as React from 'react';
-import {
-  Button,
-  Form,
-  FormFeedback,
-  FormGroup,
-  Input,
-  Label,
-} from 'reactstrap';
+import { Form, FormFeedback, FormGroup, Input, Label } from 'reactstrap';
+
+import Button, { ButtonNativeType } from 'app/common/Button/Button';
 
 type Props = {
   errors: Review;
@@ -50,7 +45,7 @@ const ReviewForm: React.SFC<Props> = ({
       <FormFeedback>{errors.body}</FormFeedback>
     </FormGroup>
 
-    <Button type="submit">Submit</Button>
+    <Button type={ButtonNativeType.Submit}>Submit</Button>
   </Form>
 );
 
