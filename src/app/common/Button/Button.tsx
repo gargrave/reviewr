@@ -18,7 +18,7 @@ export enum ButtonNativeType {
   Reset = 'reset',
 }
 
-interface IProps {
+export interface IProps {
   /** The content of the button. Can be any valid React child, including simple text. */
   children: React.ReactNode
   /**

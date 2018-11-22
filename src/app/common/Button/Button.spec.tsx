@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
 
-import Button, { ButtonNativeType, ButtonColor } from './Button'
+import Button, {
+  ButtonNativeType,
+  ButtonColor,
+  IProps as ButtonProps,
+} from './Button'
 
-const defaultProps = {
+const defaultProps: ButtonProps = {
   children: 'Hello',
   onClick: jest.fn(),
 }
