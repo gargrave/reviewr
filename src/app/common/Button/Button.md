@@ -1,27 +1,29 @@
-```js
-const style = { marginBottom: 4 };
+```jsx
+const { ButtonColor } = require('./Button')
 
-<React.Fragment>
+const style = { marginBottom: 4 }
+
+;<React.Fragment>
   <div style={style}>
-    <Button color="primary">Primary</Button>
+    <Button color={ButtonColor.Primary}>Primary</Button>
   </div>
   <div style={style}>
-    <Button color="secondary">Secondary</Button>
+    <Button color={ButtonColor.Secondary}>Secondary</Button>
   </div>
   <div style={style}>
-    <Button color="success">Success</Button>
+    <Button color={ButtonColor.Success}>Success</Button>
   </div>
   <div style={style}>
-    <Button color="info">Info</Button>
+    <Button color={ButtonColor.Info}>Info</Button>
   </div>
   <div style={style}>
-    <Button color="warning">Warning</Button>
+    <Button color={ButtonColor.Warning}>Warning</Button>
   </div>
   <div style={style}>
-    <Button color="danger">Danger</Button>
+    <Button color={ButtonColor.Danger}>Danger</Button>
   </div>
   <div style={style}>
-    <Button color="link">Link</Button>
+    <Button color={ButtonColor.Link}>Link</Button>
   </div>
-</React.Fragment>;
+</React.Fragment>
 ```
