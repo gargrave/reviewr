@@ -21,11 +21,19 @@ export enum ButtonNativeType {
 interface IProps {
   /** The content of the button. Can be any valid React child, including simple text. */
   children: React.ReactNode
-  /** The pre-defined color value to use (maps directly to Bootstrap's colors). */
+  /**
+   * The pre-defined color value to use (maps directly to Bootstrap's colors).
+   *
+   * Use the exported `ButtonColor` enum for this value.
+   */
   color?: ButtonColor
   /** The Button's click handler. You know the drill here. */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
-  /** The native HTML 'type' attribute to apply (default: 'button') */
+  /**
+   * The native HTML 'type' attribute to apply (default: 'button').
+   *
+   * Use the exported `ButtonNativeType` enum for this value.
+   */
   type?: ButtonNativeType
 }
 

@@ -6,6 +6,9 @@
     "tslint-config-airbnb",
     "tslint-config-prettier"
   ],
+  "linterOptions": {
+    "exclude": ["**/*.spec.*"]
+  },
   "rules": {
     "import-name": false,
     "interface-over-type-literal": true,
@@ -17,8 +20,5 @@
     "ordered-imports": false,
     "semicolon": [true, "never", "ignore-bound-class-methods"],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
-  },
-  "linterOptions": {
-    "exclude": ["**/*.spec.*"]
   }
 }

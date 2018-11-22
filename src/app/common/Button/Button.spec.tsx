@@ -15,6 +15,7 @@ describe('Button', () => {
       const props = component.props()
 
       expect(props.color).toBe(ButtonColor.Primary)
+      expect(props.type).toBe(ButtonNativeType.Button)
     })
   })
 })

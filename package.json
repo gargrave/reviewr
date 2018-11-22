@@ -89,6 +89,7 @@
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0"
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react-docgen-typescript": "^1.12.2"
   }
 }
