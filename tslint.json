@@ -8,14 +8,14 @@
   ],
   "rules": {
     "import-name": false,
-    "interface-over-type-literal": false,
+    "interface-over-type-literal": true,
     "jsx-no-lambda": true,
     "member-access": [true, "no-public"],
     "no-duplicate-imports": false,
     "no-submodule-imports": false,
     "object-literal-sort-keys": [true, "ignore-case", "shorthand-first"],
     "ordered-imports": false,
-    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "semicolon": [true, "never", "ignore-bound-class-methods"],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
   },
   "linterOptions": {

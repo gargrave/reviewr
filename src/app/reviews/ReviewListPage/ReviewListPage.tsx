@@ -1,65 +1,63 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import mockReviews from 'api/mocks/reviews.mocks';
+import mockReviews from 'api/mocks/reviews.mocks'
 
-import ReviewForm from '../components/ReviewForm/ReviewForm';
-import ReviewList from '../components/ReviewList/ReviewList';
+import ReviewForm from '../components/ReviewForm/ReviewForm'
+import ReviewList from '../components/ReviewList/ReviewList'
 
 const newReview = (body: string = '', title: string = ''): Review => ({
   body,
   title,
-});
+})
 
-type Props = {};
+interface IState {
+  errors: Review
+  review: Review
+  reviews: Review[]
+}
 
-type State = {
-  errors: Review;
-  review: Review;
-  reviews: Review[];
-};
-
-class ReviewListPage extends React.Component<Props, State> {
+class ReviewListPage extends React.Component<{}, IState> {
   state = {
     errors: newReview(),
     review: newReview(),
     reviews: [...mockReviews],
-  };
+  }
 
   handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const key = event.target.name;
+    const key = event.target.name
     if (key in this.state.review) {
-      const value = event.target.value;
+      const value = event.target.value
       this.setState(({ review }) => ({
         review: { ...review, [key]: value },
-      }));
+      }))
     }
-  };
+  }
 
   handleSubmitReview = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const { review } = this.state;
-    const errors = newReview();
+    event.preventDefault()
+    const { review } = this.state
+    const errors = newReview()
 
     if (!review.title) {
-      errors.title = 'This field is required';
+      errors.title = 'This field is required'
     }
     if (!review.body) {
-      errors.body = 'This field is required';
+      errors.body = 'This field is required'
     }
 
     if (errors.body || errors.title) {
-      this.setState({ errors });
+      this.setState({ errors })
     } else {
       this.setState(({ reviews }) => ({
         errors: newReview(),
         review: newReview(),
         reviews: [newReview(review.body, review.title)].concat(reviews),
-      }));
+      }))
     }
-  };
+  }
 
   render() {
-    const { errors, review, reviews } = this.state;
+    const { errors, review, reviews } = this.state
 
     return (
       <div>
@@ -73,8 +71,8 @@ class ReviewListPage extends React.Component<Props, State> {
 
         <ReviewList reviews={reviews} />
       </div>
-    );
+    )
   }
 }
 
-export default ReviewListPage;
+export default ReviewListPage

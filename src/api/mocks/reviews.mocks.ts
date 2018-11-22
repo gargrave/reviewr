@@ -8,6 +8,6 @@ const mocks: Review[] = [
       "I didn't ask it to or anything, but my phone totally exploded and burned up my nicest jeans.",
     title: 'Phone exploded in my pocket',
   },
-];
+]
 
-export default mocks;
+export default mocks

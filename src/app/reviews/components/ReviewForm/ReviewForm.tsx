@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { Form, FormFeedback, FormGroup, Input, Label } from 'reactstrap';
+import * as React from 'react'
+import { Form, FormFeedback, FormGroup, Input, Label } from 'reactstrap'
 
-import Button, { ButtonNativeType } from 'app/common/Button/Button';
+import Button, { ButtonNativeType } from 'app/common/Button/Button'
 
-type Props = {
-  errors: Review;
-  onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
-  review: Review;
-};
+interface IProps {
+  errors: Review
+  onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
+  review: Review
+}
 
-const ReviewForm: React.SFC<Props> = ({
+const ReviewForm: React.SFC<IProps> = ({
   errors,
   onInputChange,
   onSubmit,
   review,
-}: Props) => (
+}: IProps) => (
   <Form onSubmit={onSubmit}>
     <FormGroup>
       <Label for="title">Title</Label>
@@ -47,6 +47,6 @@ const ReviewForm: React.SFC<Props> = ({
 
     <Button type={ButtonNativeType.Submit}>Submit</Button>
   </Form>
-);
+)
 
-export default ReviewForm;
+export default ReviewForm

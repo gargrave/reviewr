@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import ReviewListPage from './app/reviews/ReviewListPage/ReviewListPage';
+import ReviewListPage from './app/reviews/ReviewListPage/ReviewListPage'
 
-import styles from './App.module.scss';
+import styles from './App.module.scss'
 
 const App: React.SFC = () => (
   <div className={styles.app}>
@@ -11,6 +11,6 @@ const App: React.SFC = () => (
       <ReviewListPage />
     </main>
   </div>
-);
+)
 
-export default App;
+export default App

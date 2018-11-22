@@ -1,4 +1,4 @@
 type Review = {
-  body: string;
-  title: string;
-};
+  body: string
+  title: string
+}
