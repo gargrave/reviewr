@@ -1,4 +1,6 @@
-const mocks: Review[] = [
+import { IReview } from 'app/reviews/reviews.types'
+
+const mocks: IReview[] = [
   {
     body: "I don't even know what to say about this pizza, other than YUCK!",
     title: 'Worst Pizza I Ever Ate',

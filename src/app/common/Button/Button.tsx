@@ -18,7 +18,7 @@ export enum ButtonNativeType {
   Reset = 'reset',
 }
 
-export interface IProps {
+export interface IButtonProps {
   /** The content of the button. Can be any valid React child, including simple text. */
   children: React.ReactNode
   /**
@@ -43,12 +43,12 @@ export interface IProps {
  * This is mostly a wrapper for the [Reactstrap Button](https://reactstrap.github.io/components/buttons)
  * with some additional styles/props added.
  */
-const Button: React.SFC<IProps> = ({
+const Button: React.SFC<IButtonProps> = ({
   color,
   children,
   onClick,
   type,
-}: IProps) => (
+}) => (
   <ButtonBS color={color} onClick={onClick} type={type}>
     {children}
   </ButtonBS>
@@ -59,4 +59,5 @@ Button.defaultProps = {
   type: ButtonNativeType.Button,
 }
 
-export default Button
+export { Button as UnwrappedButton }
+export default React.memo(Button)

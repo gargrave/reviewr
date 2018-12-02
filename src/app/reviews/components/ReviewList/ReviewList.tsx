@@ -1,14 +1,16 @@
 import * as React from 'react'
 
+import { IReview } from '../../reviews.types'
+
 import Review from '../Review/Review'
 
 import styles from './ReviewList.module.scss'
 
-interface IProps {
-  reviews: Review[]
+export interface IReviewListProps {
+  reviews: IReview[]
 }
 
-const ReviewList: React.SFC<IProps> = ({ reviews }: IProps) => (
+const ReviewList: React.SFC<IReviewListProps> = ({ reviews }) => (
   <div className={styles.reviewList}>
     {reviews.map((review, i) => (
       <Review key={i} review={review} />
@@ -16,4 +18,5 @@ const ReviewList: React.SFC<IProps> = ({ reviews }: IProps) => (
   </div>
 )
 
-export default ReviewList
+export { ReviewList as UnwrappedReviewList }
+export default React.memo(ReviewList)

@@ -1,21 +1,23 @@
 import * as React from 'react'
 import { Form, FormFeedback, FormGroup, Input, Label } from 'reactstrap'
 
+import { IReview } from '../../reviews.types'
+
 import Button, { ButtonNativeType } from 'app/common/Button/Button'
 
-interface IProps {
-  errors: Review
+export interface IReviewFormProps {
+  errors: IReview
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
-  review: Review
+  review: IReview
 }
 
-const ReviewForm: React.SFC<IProps> = ({
+const ReviewForm: React.SFC<IReviewFormProps> = ({
   errors,
   onInputChange,
   onSubmit,
   review,
-}: IProps) => (
+}) => (
   <Form onSubmit={onSubmit}>
     <FormGroup>
       <Label for="title">Title</Label>
@@ -49,4 +51,5 @@ const ReviewForm: React.SFC<IProps> = ({
   </Form>
 )
 
-export default ReviewForm
+export { ReviewForm as UnwrappedReviewForm }
+export default React.memo(ReviewForm)

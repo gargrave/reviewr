@@ -2,21 +2,26 @@ import * as React from 'react'
 
 import mockReviews from 'api/mocks/reviews.mocks'
 
+import { IReview } from '../reviews.types'
+
 import ReviewForm from '../components/ReviewForm/ReviewForm'
 import ReviewList from '../components/ReviewList/ReviewList'
 
-const newReview = (body: string = '', title: string = ''): Review => ({
+const newReview = (body: string = '', title: string = ''): IReview => ({
   body,
   title,
 })
 
-interface IState {
-  errors: Review
-  review: Review
-  reviews: Review[]
+export interface IReviewListPageState {
+  errors: IReview
+  review: IReview
+  reviews: IReview[]
 }
 
-class ReviewListPage extends React.Component<{}, IState> {
+export default class ReviewListPage extends React.Component<
+  {},
+  IReviewListPageState
+> {
   state = {
     errors: newReview(),
     review: newReview(),
@@ -74,5 +79,3 @@ class ReviewListPage extends React.Component<{}, IState> {
     )
   }
 }
-
-export default ReviewListPage
